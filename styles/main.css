@@ -195,7 +195,7 @@ a {
 
 .footer-column {
     flex: 1;
-    min-width: 200px;
+    min-width: 100px;
     margin-bottom: 30px;
 }
 
@@ -278,4 +278,235 @@ a {
     .hero-image p {
         font-size: 1.2rem;
     }
+.dropdown2-submenu {
+    position: relative; /* Needed for positioning the submenu content */
+}
+
+.dropdown2-submenu-content {
+    display: none; /* Initially hide the submenu content */
+    position: absolute; /* Position the submenu content relative to the submenu */
+    left: 100%; /* Position it to the right of the HOME link */
+    top: 0; /* Align it with the top of the HOME link */
+    background-color: white; /* Or whatever background you want */
+    border: 1px solid #ccc; /* Optional border */
+    padding: 5px; /* Optional padding */
+    z-index: 1;/* make sure the sub menu is on top of other elements*/
+}
+
+.dropdown-submenu:hover
+.dropdown-submenu-content {
+    display: block; /* Show the submenu content on hover */
+}
+#greeting-container {
+  text-align: center; /* Center the text */
+  font-family: sans-serif; /* Example font */
+}
+
+#greeting {
+  font-size: 2.5em; /* Larger font size for the greeting */
+  color: #333; /* Dark gray color */
+  margin-bottom: 5px; /* Spacing below the greeting */
+  font-weight: bold; /* Bold text */
+}
+
+..welcome{
+    font-size: 1.8em;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+..subline {
+  font-size: 1em; /* Smaller font size for the subline */
+  color: #777; /* Lighter gray color */
+  font-style: italic; /* Italic text */
+}
+.content-section {
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .shop-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.shop-section {
+    padding: 20px;
+}
+
+.shop-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.product-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    color: #007bff;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-image{
+    max-width: 330px;
+}
+/* Existing CSS from previous responses */
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: none; /* Initially hide the arrow */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #0056b3;
+}
+
+body {
+    position: relative; /* Needed for absolute positioning of back-to-top */
+}
+
+/* JavaScript to show/hide the arrow */
+    /* Add the following JavaScript to your scripts/main.js file, or within a <script> tag just before the closing </body> tag */
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.querySelector(".back-to-top").style.display = "block";
+  } else {
+    document.querySelector(".back-to-top").style.display = "none";
+  }
 }
